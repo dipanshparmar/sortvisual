@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+// header styles import
+@import 'header';
+
+// main section import
+@import 'main';

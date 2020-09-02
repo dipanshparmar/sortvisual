@@ -1,0 +1,22 @@
+$redColor: #F1413D;
+$yellowColor: #FBB243;
+$greenColor: #328849;
+
+main {
+    width: 100%;
+    height: 88vh;
+
+    #visualizer-container {
+        width: 90%;
+        margin: auto;
+        background: whitesmoke;
+        height: 88vh;
+        display: flex;
+
+        div {
+            border: 1px solid transparent;
+            margin-left: 1px;
+            background: rgb(225, 186, 253);
+        }
+    }
+}

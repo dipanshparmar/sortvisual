@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta info -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- internal CSS -->
+    <link rel="stylesheet" href="scss/style.css" />
+
+    <!-- title -->
+    <title>SortVisual - Visualise things for ease</title>
+  </head>
+  <body>
+    <!-- header with navbar and stuff8 -->
+    <header>
+      <!-- logo section8 -->
+      <div id="logo">
+        <span class="logo-text">SortVisual</span>
+      </div>
+      <!-- controls with speed and size controlling -->
+      <div id="controls">
+        <div id="speed-controls-container">
+          <span>Speed</span>
+          <input
+            class="slider"
+            type="range"
+            name="speed"
+            id="speed-control"
+            min="10"
+            max="101"
+            value="50"
+            step="20"
+          />
+        </div>
+        <div id="size-controls-container">
+          <span>Size</span>
+          <input
+            class="slider"
+            type="range"
+            name="size"
+            id="size-control"
+            min="10"
+            max="101"
+            value="50"
+            step="10"
+          />
+        </div>
+      </div>
+      <!-- different sorting algos selection -->
+      <div id="options">
+        <span class="merge">Merge</span>
+        <span class="quick">Quick</span>
+        <span class="bucket">Bucket</span>
+        <span class="heap">Heap</span>
+        <span class="counting">Counting</span>
+      </div>
+
+      <!-- generate new array button -->
+      <div id="new-array-button">
+          <button type="button" id="new-array">new array</button>
+      </div>
+    </header>
+    <!-- header closes -->
+
+    <!-- algorithms working body -->
+    <main>
+      <div id="visualizer-container">
+        
+      </div>
+    </main>
+
+
+    <!-- internal script -->
+    <script src="js/interface.js"></script>
+  </body>
+</html>
