@@ -33,7 +33,7 @@
             type="range"
             name="speed"
             id="speed-control"
-            min="10"
+            min="0"
             max="101"
             value="50"
             step="20"
@@ -55,11 +55,11 @@
       </div>
       <!-- different sorting algos selection -->
       <div id="options">
-        <span class="merge">Merge</span>
-        <span class="quick">Quick</span>
-        <span class="bucket">Bucket</span>
-        <span class="heap">Heap</span>
-        <span class="counting">Counting</span>
+        <span class="merge button">Merge</span>
+        <span class="quick button">Quick</span>
+        <span class="bubble button">Bubble</span>
+        <span class="heap button">Heap</span>
+        <span class="counting button">Counting</span>
       </div>
 
       <!-- generate new array button -->
@@ -78,6 +78,6 @@
 
 
     <!-- internal script -->
-    <script src="js/interface.js"></script>
+    <script type="module" src="js/interface.js"></script>
   </body>
 </html>
