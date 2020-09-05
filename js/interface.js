@@ -1,5 +1,6 @@
 /*********imports****************/
 import bubbleSort from "./algorithms/bubbleSort.js";
+import quickSort from "./algorithms/quickSort.js";
 
 /*********************Variables********************/
 
@@ -30,8 +31,17 @@ getBarsForFifty();
 
 /**********************Event listeners***************/
 
-// converting the speedValue into the possible setTimeout delay
+// handling the event on quick sort button
+document.querySelector(".quick").addEventListener("click", () => {
+  // getting the speed value
+  initialSpeed = parseInt(document.querySelector("#speed-control").value);
 
+  // converting the speed value into the possible timeout value
+  getTimeoutValue(initialSpeed);
+
+  // performing bubble sort
+  quickSort(array, 0, array.length - 1, timeout); // params: array and delay value
+});
 
 // handling the event on bubble sort button
 document.querySelector(".bubble").addEventListener("click", () => {
@@ -41,7 +51,7 @@ document.querySelector(".bubble").addEventListener("click", () => {
   // converting the speed value into the possible timeout value
   getTimeoutValue(initialSpeed);
 
-  // performing bubble sort 
+  // performing bubble sort
   bubbleSort(array, timeout); // params: array and delay value
 });
 
@@ -89,7 +99,7 @@ document.querySelector("#new-array").addEventListener("click", () => {
 /****************************functions****************/
 // getting the possible setTimeout value
 function getTimeoutValue(initialSpeed) {
-  switch(initialSpeed) {
+  switch (initialSpeed) {
     case 0:
       timeout = 700;
       break;
@@ -159,7 +169,7 @@ function getBarsForNinty() {
   // displaying the bars into the dom. added them like this because of the performance issues
   document.querySelector(
     "#visualizer-container"
-  ).innerHTML = `<div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>`
+  ).innerHTML = `<div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>`;
 
   // adding class to the divs to make width perfect
   document.querySelectorAll("#visualizer-container div").forEach((div) => {
