@@ -1,6 +1,7 @@
 /*********imports****************/
 import bubbleSort from "./algorithms/bubbleSort.js";
 import quickSort from "./algorithms/quickSort.js";
+import selectionSort from "./algorithms/selectionSort.js";
 
 /*********************Variables********************/
 
@@ -31,6 +32,18 @@ getBarsForFifty();
 
 /**********************Event listeners***************/
 
+// handling the event on selection sort button
+document.querySelector('.selection').addEventListener('click', () => {
+  // getting the speed value
+  initialSpeed = parseInt(document.querySelector("#speed-control").value);
+
+  // converting the speed value into the possible timeout value
+  getTimeoutValue(initialSpeed);
+
+  // performing selection sort
+  selectionSort(array, timeout);
+})
+
 // handling the event on quick sort button
 document.querySelector(".quick").addEventListener("click", () => {
   // getting the speed value
@@ -39,7 +52,7 @@ document.querySelector(".quick").addEventListener("click", () => {
   // converting the speed value into the possible timeout value
   getTimeoutValue(initialSpeed);
 
-  // performing bubble sort
+  // performing quick sort
   quickSort(array, 0, array.length - 1, timeout); // params: array and delay value
 });
 

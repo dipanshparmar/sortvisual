@@ -1,73 +1,73 @@
-// importing visualization
 import updateDiv from "../visualization.js";
 
-// quick sort function using recursion
-function quickSort(array, lowerBound, upperBound, timeout) {
+const divs = document.querySelector("#visualizer-container").children;
+
+export default function quickSort(array, low, high, timeout) {
   let pivot;
 
-  if (upperBound > lowerBound) {
-    pivot = partition(array, lowerBound, upperBound, timeout);
-    quickSort(array, lowerBound, pivot - 1, timeout);
-    quickSort(array, pivot + 1, upperBound, timeout);
+  // termination condition
+  if (high > low) {
+    pivot = partition(array, low, high, timeout);
+    updateDiv(divs[pivot], "orange", timeout);
+    quickSort(array, low, pivot - 1, timeout);
+    // updateDiv(divs[pivot], "green", timeout)
+    quickSort(array, pivot + 1, high, timeout);
+    // updateDiv(divs[pivot], "green", timeout)
   }
+  updateDiv(divs[pivot], "green", timeout)
 }
 
-function partition(array, lowerBound, upperBound, timeout) {
-  // getting all the divs
-  const divs = document.querySelectorAll("#visualizer-container div");
-
-  // initializing variables
+function partition(array, low, high, timeout) {
   let left,
     right,
-    pivot = array[lowerBound];
-  left = lowerBound;
-  right = upperBound;
+    pivot_item = array[low];
 
-  // while left < right
+  left = low;
+  right = high;
+
   while (left < right) {
-    updateDiv(divs[left], "red", timeout);
+    // to add the green color to the first element
+    updateDiv(divs[left], "green", timeout);
     // move left while item < pivot
-    while (array[left] <= pivot) {
+    while (array[left] <= pivot_item) {
       left++;
-      updateDiv(divs[left], "green", timeout, array[left]);
-    }
-    // move right while item > pivot
-    while (array[right] > pivot) {
-      right--;
-      updateDiv(divs[right], "green", timeout, array[right]);
+      // setting bakcground green of the left element
+      updateDiv(divs[left], "green", timeout);
     }
 
-    // conditional statement
+    // move right while item > pivot
+    while (array[right] > pivot_item) {
+      // to add the green color to the last element
+      updateDiv(divs[right], "green", timeout);
+      right--;
+      // setting bakcground green of the right element
+      updateDiv(divs[right], "green", timeout);
+    }
+
     if (left < right) {
+      // don't change anything
+      // for a good visual while swapping
       swap(array, left, right, timeout);
+      updateDiv(divs[left], "green", timeout);
+      updateDiv(divs[right], "green", timeout);
     }
   }
 
-  // right is the final position for the pivot
-  array[lowerBound] = array[right];
-  updateDiv(divs[lowerBound], "green", timeout, array[right]);
-  array[right] = pivot;
-  updateDiv(divs[right], "green", timeout, pivot);
+  // right is final position for the pivot
+  array[low] = array[right];
+  updateDiv(divs[low], "green", timeout, array[right]);
+  array[right] = pivot_item;
+  updateDiv(divs[right], "green", timeout, pivot_item);
 
-  //   returning the position of new pivot
+  // chnaging back to green
+  updateDiv(divs[low], "green", timeout, array[right]);
   return right;
 }
 
-// function for swapping
-function swap(array, firstPosition, secondPosition, timeout) {
-  // getting all the divs
-  const divs = document.querySelectorAll("#visualizer-container div");
-
-  const temp = array[firstPosition];
-  array[firstPosition] = array[secondPosition];
-
-  // adding the red color to the first part of the swapped club
-  updateDiv(divs[firstPosition], "red", timeout, array[temp]);
-
-  array[secondPosition] = temp;
-
-  // adding the orange color to the second part of the swapped club
-  updateDiv(divs[secondPosition], "orange", timeout, array[secondPosition]);
+function swap(array, firstPos, secondPos, timeout) {
+  const temp = array[firstPos];
+  array[firstPos] = array[secondPos];
+  updateDiv(divs[firstPos], "red", timeout, array[secondPos]);
+  array[secondPos] = temp;
+  updateDiv(divs[secondPos], "red", timeout, temp);
 }
-
-export default quickSort;
