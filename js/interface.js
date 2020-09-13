@@ -2,6 +2,7 @@
 import bubbleSort from "./algorithms/bubbleSort.js";
 import quickSort from "./algorithms/quickSort.js";
 import selectionSort from "./algorithms/selectionSort.js";
+import mergeSort from "./algorithms/mergeSort.js";
 
 /*********************Variables********************/
 
@@ -43,6 +44,18 @@ document.querySelector('.selection').addEventListener('click', () => {
   // performing selection sort
   selectionSort(array, timeout);
 })
+
+// handling the event on merge sort button
+document.querySelector(".merge").addEventListener("click", () => {
+  // getting the speed value
+  initialSpeed = parseInt(document.querySelector("#speed-control").value);
+
+  // converting the speed value into the possible timeout value
+  getTimeoutValue(initialSpeed);
+
+  // performing merge sort
+  mergeSort(array, 0, array.length - 1, timeout); // params: array and delay value
+});
 
 // handling the event on quick sort button
 document.querySelector(".quick").addEventListener("click", () => {

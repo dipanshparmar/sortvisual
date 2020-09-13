@@ -1,20 +1,22 @@
 import updateDiv from "../visualization.js";
 
+// to store the last pivot
+let toChange;
+
 const divs = document.querySelector("#visualizer-container").children;
 
-export default function quickSort(array, low, high, timeout) {
+function quickSort(array, low, high, timeout) {
   let pivot;
 
   // termination condition
   if (high > low) {
     pivot = partition(array, low, high, timeout);
-    updateDiv(divs[pivot], "orange", timeout);
+    // to store the index of the previous pivot
+    toChange = divs[pivot];
     quickSort(array, low, pivot - 1, timeout);
-    // updateDiv(divs[pivot], "green", timeout)
     quickSort(array, pivot + 1, high, timeout);
-    // updateDiv(divs[pivot], "green", timeout)
+    updateDiv(toChange, "green", timeout);
   }
-  updateDiv(divs[pivot], "green", timeout)
 }
 
 function partition(array, low, high, timeout) {
@@ -24,43 +26,35 @@ function partition(array, low, high, timeout) {
 
   left = low;
   right = high;
-
   while (left < right) {
-    // to add the green color to the first element
-    updateDiv(divs[left], "green", timeout);
     // move left while item < pivot
     while (array[left] <= pivot_item) {
-      left++;
-      // setting bakcground green of the left element
+      updateDiv(divs[left], "darkgreen", timeout);
       updateDiv(divs[left], "green", timeout);
+      left++;
     }
 
     // move right while item > pivot
     while (array[right] > pivot_item) {
-      // to add the green color to the last element
+      updateDiv(divs[right], "darkgreen", timeout);
       updateDiv(divs[right], "green", timeout);
       right--;
-      // setting bakcground green of the right element
-      updateDiv(divs[right], "green", timeout);
     }
 
     if (left < right) {
-      // don't change anything
-      // for a good visual while swapping
+      updateDiv(divs[left], "red", timeout);
+      updateDiv(divs[right], "red", timeout);
       swap(array, left, right, timeout);
-      updateDiv(divs[left], "green", timeout);
-      updateDiv(divs[right], "green", timeout);
     }
   }
 
-  // right is final position for the pivot
+  // I'm not sure what is happening here, or maybe I know. It seems like a swapping process
   array[low] = array[right];
   updateDiv(divs[low], "green", timeout, array[right]);
   array[right] = pivot_item;
-  updateDiv(divs[right], "green", timeout, pivot_item);
+  updateDiv(toChange, "green", timeout); // changing the previous pivot back to green
+  updateDiv(divs[right], "orange", timeout, pivot_item);
 
-  // chnaging back to green
-  updateDiv(divs[low], "green", timeout, array[right]);
   return right;
 }
 
@@ -70,4 +64,10 @@ function swap(array, firstPos, secondPos, timeout) {
   updateDiv(divs[firstPos], "red", timeout, array[secondPos]);
   array[secondPos] = temp;
   updateDiv(divs[secondPos], "red", timeout, temp);
+
+  // making the divs back to green after swap
+  updateDiv(divs[firstPos], "green", timeout);
+  updateDiv(divs[secondPos], "green", timeout);
 }
+
+export default quickSort;
