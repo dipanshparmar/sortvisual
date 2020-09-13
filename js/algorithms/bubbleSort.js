@@ -12,6 +12,7 @@ function bubbleSort(array, timeout) {
   for (let i = 0; i < array.length - 1; i++) {
     for (let j = 0; j < array.length - i - 1; j++) {
       // updating divs for the first iteration
+      updateDiv(divs[j], "red", timeout);
       updateDiv(divs[j], "green", timeout);
 
       if (array[j] > array[j + 1]) {
@@ -38,8 +39,8 @@ function bubbleSort(array, timeout) {
     // coloring the sorted part with different color
     --lastIndex;
     updateDiv(divs[lastIndex], "purple", timeout);
-    if(lastIndex == 1) {
-      updateDiv(divs[0], "purple", timeout)
+    if (lastIndex == 1) {
+      updateDiv(divs[0], "purple", timeout);
     }
   }
 }

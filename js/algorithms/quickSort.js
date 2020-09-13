@@ -29,14 +29,14 @@ function partition(array, low, high, timeout) {
   while (left < right) {
     // move left while item < pivot
     while (array[left] <= pivot_item) {
-      updateDiv(divs[left], "darkgreen", timeout);
+      updateDiv(divs[left], "red", timeout);
       updateDiv(divs[left], "green", timeout);
       left++;
     }
 
     // move right while item > pivot
     while (array[right] > pivot_item) {
-      updateDiv(divs[right], "darkgreen", timeout);
+      updateDiv(divs[right], "red", timeout);
       updateDiv(divs[right], "green", timeout);
       right--;
     }

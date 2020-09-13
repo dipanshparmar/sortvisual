@@ -3,6 +3,9 @@ import bubbleSort from "./algorithms/bubbleSort.js";
 import quickSort from "./algorithms/quickSort.js";
 import selectionSort from "./algorithms/selectionSort.js";
 import mergeSort from "./algorithms/mergeSort.js";
+import heapSort from "./algorithms/heapSort.js";
+
+import { setDelayToZero } from "./visualization.js";
 
 /*********************Variables********************/
 
@@ -33,8 +36,23 @@ getBarsForFifty();
 
 /**********************Event listeners***************/
 
+// handling the event on heap sort button
+document.querySelector(".heap").addEventListener("click", () => {
+  // getting the speed value
+  initialSpeed = parseInt(document.querySelector("#speed-control").value);
+
+  // converting the speed value into the possible timeout value
+  getTimeoutValue(initialSpeed);
+
+  // performing heap sort
+  heapSort(array, timeout);
+
+  // to start next sorting algorithm asap (without any delay)
+  setDelayToZero();
+});
+
 // handling the event on selection sort button
-document.querySelector('.selection').addEventListener('click', () => {
+document.querySelector(".selection").addEventListener("click", () => {
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
 
@@ -43,7 +61,10 @@ document.querySelector('.selection').addEventListener('click', () => {
 
   // performing selection sort
   selectionSort(array, timeout);
-})
+
+  // to start next sorting algorithm asap (without any delay)
+  setDelayToZero();
+});
 
 // handling the event on merge sort button
 document.querySelector(".merge").addEventListener("click", () => {
@@ -55,6 +76,9 @@ document.querySelector(".merge").addEventListener("click", () => {
 
   // performing merge sort
   mergeSort(array, 0, array.length - 1, timeout); // params: array and delay value
+
+  // to start next sorting algorithm asap (without any delay)
+  setDelayToZero();
 });
 
 // handling the event on quick sort button
@@ -67,6 +91,9 @@ document.querySelector(".quick").addEventListener("click", () => {
 
   // performing quick sort
   quickSort(array, 0, array.length - 1, timeout); // params: array and delay value
+
+  // to start next sorting algorithm asap (without any delay)
+  setDelayToZero();
 });
 
 // handling the event on bubble sort button
@@ -79,6 +106,9 @@ document.querySelector(".bubble").addEventListener("click", () => {
 
   // performing bubble sort
   bubbleSort(array, timeout); // params: array and delay value
+
+  // to start next sorting algorithm asap (without any delay)
+  setDelayToZero();
 });
 
 // listening for the change on the size slider
