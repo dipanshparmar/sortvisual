@@ -1,3 +1,5 @@
+// TODO: make site responsive
+
 $redColor: #F1413D;
 $yellowColor: #FBB243;
 $greenColor: #328849;
@@ -17,6 +19,26 @@ main {
             border: 1px solid transparent;
             margin-left: 1px;
             background: rgb(225, 186, 253);
+        }
+    }
+}
+
+// classes for javascript
+.disableButtonsAndInputs {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.enableButtonsAndInputs {
+    pointer-events: all;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        #visualizer-container {
+            max-width: 90%;
+            overflow-x: scroll;
         }
     }
 }

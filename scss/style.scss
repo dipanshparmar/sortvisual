@@ -10,8 +10,15 @@ body {
     overflow: hidden;
 }
 
+// mobile notice import
+@import "notice";
+
 // header styles import
 @import 'header';
 
 // main section import
 @import 'main';
+
+@media only screen and (max-width: 425px) {
+
+}

@@ -5,7 +5,11 @@ import selectionSort from "./algorithms/selectionSort.js";
 import mergeSort from "./algorithms/mergeSort.js";
 import heapSort from "./algorithms/heapSort.js";
 
-import { setDelayToZero } from "./visualization.js";
+import {
+  setDelayToZero,
+  disableButtonsAndInputs,
+  enableButtonsAndInputs,
+} from "./visualization.js";
 
 /*********************Variables********************/
 
@@ -44,8 +48,14 @@ document.querySelector(".heap").addEventListener("click", () => {
   // converting the speed value into the possible timeout value
   getTimeoutValue(initialSpeed);
 
+  // disabling the buttons
+  disableButtonsAndInputs();
+
   // performing heap sort
   heapSort(array, timeout);
+
+  // enabling the buttons
+  enableButtonsAndInputs();
 
   // to start next sorting algorithm asap (without any delay)
   setDelayToZero();
@@ -59,8 +69,14 @@ document.querySelector(".selection").addEventListener("click", () => {
   // converting the speed value into the possible timeout value
   getTimeoutValue(initialSpeed);
 
+  // disabling the buttons
+  disableButtonsAndInputs();
+
   // performing selection sort
   selectionSort(array, timeout);
+
+  // enabling the buttons
+  enableButtonsAndInputs();
 
   // to start next sorting algorithm asap (without any delay)
   setDelayToZero();
@@ -74,8 +90,14 @@ document.querySelector(".merge").addEventListener("click", () => {
   // converting the speed value into the possible timeout value
   getTimeoutValue(initialSpeed);
 
+  // disabling the buttons
+  disableButtonsAndInputs();
+
   // performing merge sort
   mergeSort(array, 0, array.length - 1, timeout); // params: array and delay value
+
+  // enabling the buttons
+  enableButtonsAndInputs();
 
   // to start next sorting algorithm asap (without any delay)
   setDelayToZero();
@@ -89,8 +111,14 @@ document.querySelector(".quick").addEventListener("click", () => {
   // converting the speed value into the possible timeout value
   getTimeoutValue(initialSpeed);
 
+  // disabling the buttons
+  disableButtonsAndInputs();
+
   // performing quick sort
   quickSort(array, 0, array.length - 1, timeout); // params: array and delay value
+
+  // enabling the buttons
+  enableButtonsAndInputs();
 
   // to start next sorting algorithm asap (without any delay)
   setDelayToZero();
@@ -104,8 +132,14 @@ document.querySelector(".bubble").addEventListener("click", () => {
   // converting the speed value into the possible timeout value
   getTimeoutValue(initialSpeed);
 
+  // disabling the buttons
+  disableButtonsAndInputs();
+
   // performing bubble sort
   bubbleSort(array, timeout); // params: array and delay value
+
+  // enabling the buttons
+  enableButtonsAndInputs();
 
   // to start next sorting algorithm asap (without any delay)
   setDelayToZero();
@@ -474,6 +508,11 @@ function getNewArrayFromButton(barsLength) {
   for (let i = 0; i < barsLength; i++) {
     array.push(Math.floor(Math.random() * maxHeight));
   }
+
+  // setting the default color of bars
+  document.querySelectorAll(".bar").forEach((bar) => {
+    bar.style.background = "rgb(225, 186, 253)";
+  });
 }
 
 /*************************************************/

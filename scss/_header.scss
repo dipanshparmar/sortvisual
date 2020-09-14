@@ -8,6 +8,7 @@ header {
   align-items: center;
   background: $blackColor;
   color: white;
+  user-select: none;
 
   #logo {
     display: flex;
@@ -15,9 +16,9 @@ header {
     flex: 1;
 
     span {
-        font-size: 20px;
-        font-weight: bold;
-        cursor: default;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: default;
     }
   }
 
@@ -46,7 +47,6 @@ header {
           border: 1px solid #000000;
           height: 10px;
           width: 10px;
-          border-radius: 20px;  
           border-radius: 3px;
           background: #ffffff;
           cursor: pointer;
@@ -67,22 +67,65 @@ header {
   }
 
   #new-array-button {
-      flex: 0.6;
-      display: flex;
-      justify-content: flex-start;
+    flex: 0.6;
+    display: flex;
+    justify-content: flex-start;
 
-      button {
-          background: rgb(26, 133, 5);
-          border: none;
-          padding: 13px 10px;
-          color: white;
-          border-radius: 5px;
-          text-transform: uppercase;
-          font-size: 12px;
-          font-weight: bold;
-          letter-spacing: 2px;
-          cursor: pointer;
-          outline: none;
+    button {
+      background: rgb(26, 133, 5);
+      border: none;
+      padding: 13px 10px;
+      color: white;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+
+// responsiveness goes here :)
+@media only screen and (max-width: 768px) {
+  header {
+    #logo {
+      span {
+        font-size: 16px;
       }
+    }
+
+    #controls {
+      span {
+        font-size: 12px;
+      }
+
+      #speed-controls-container,
+      #size-controls-container {
+        input.slider {
+          width: 80%;
+
+          &::-webkit-slider-thumb {
+            height: 7px;
+            width: 7px;
+          }
+        }
+      }
+    }
+
+    #options {
+      span {
+        font-size: 13px;
+      }
+    }
+
+    #new-array-button {
+      button {
+        font-size: 8px;
+        padding: 10px 4px;
+        letter-spacing: 1px;
+      }
+    }
   }
 }
