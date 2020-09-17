@@ -9,4 +9,4 @@ SortVisual is a web app to visualize various sorting algorithms. This web app ca
 Click [here](https://dipanshparmar.github.io/sortvisual) to visit the SortVisual.
 
 ## License
-SortVisual is licensed under the [GPL-3.0 License](https://choosealicense.com/licenses/agpl-3.0/)
+SortVisual is licensed under the [AGPL-3.0 License](https://choosealicense.com/licenses/agpl-3.0/)
