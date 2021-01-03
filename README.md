@@ -17,7 +17,7 @@ Please refer to the contributing.md for detailed explanations. Looking forward t
 ## Stuck somewhere? Need help?
 Please head towards my [profile](https://github.com/dipanshparmar) and contact me on my social media. I'd love to help :smiley:
 
-### Code Of Conduct
-We strongly recommend checking out our Code Of Conduct
+## Code Of Conduct
+We strongly recommend checking out our Code Of Conduct.
 
 **Happy Contributing** :tada:
