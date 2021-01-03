@@ -1,4 +1,9 @@
-Hello people of the internet :wave:<br/>
+[![GitHub issues](https://img.shields.io/github/issues/dipanshparmar/sortvisual?style=for-the-badge)](https://github.com/dipanshparmar/sortvisual/issues)
+[![GitHub forks](https://img.shields.io/github/forks/dipanshparmar/sortvisual?style=for-the-badge)](https://github.com/dipanshparmar/sortvisual/network)
+[![GitHub stars](https://img.shields.io/github/stars/dipanshparmar/sortvisual?style=for-the-badge)](https://github.com/dipanshparmar/sortvisual/stargazers)
+[![GitHub license](https://img.shields.io/github/license/dipanshparmar/sortvisual?style=for-the-badge)](https://github.com/dipanshparmar/sortvisual/blob/master/LICENSE)
+
+Hello, people of the internet :wave:<br/>
 Thanks for stopping by and having a look at SortVisual. But wait! Do you know actually what is SortVisual? Let's collect some info :smile:
 
 ## What is SortVisual?
