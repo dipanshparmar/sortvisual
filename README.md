@@ -11,7 +11,6 @@ SortVisual can be helpful for those people who just started learning about algor
 You only need some knowledge of HTML, CSS and Javascript and you're good to go. Dont' know Javascript? You can still help in UI improvements. :grin:
 
 ## How to Contribute?
-Now comes the interesting part.
 Please refer to the contributing.md for detailed explanations. Looking forward to see you in the board.
 
 ## Stuck somewhere? Need help?
