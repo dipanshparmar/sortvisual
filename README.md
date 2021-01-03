@@ -13,6 +13,14 @@ You only need some knowledge of HTML, CSS and Javascript and you're good to go. 
 ## How to Contribute?
 Please refer to the [contributing.md](https://github.com/dipanshparmar/sortvisual/blob/master/CONTRIBUTING.md) for detailed explanations. Looking forward to see you in the board.
 
+## Contributor's Clan
+**These are the people behind this project**
+<a href="https://github.com/dipanshparmar/sortvisual/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=dipanshparmar/sortvisual" />
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
+
 ## Stuck somewhere? Need help?
 Please head towards [my profile](https://github.com/dipanshparmar) and contact me on my social media. I'd love to help :smiley:
 
