@@ -11,12 +11,12 @@ SortVisual can be helpful for those people who just started learning about algor
 You only need some knowledge of HTML, CSS and Javascript and you're good to go. Dont' know Javascript? You can still help in UI improvements. :grin:
 
 ## How to Contribute?
-Please refer to the contributing.md for detailed explanations. Looking forward to see you in the board.
+Please refer to the [contributing.md](https://github.com/dipanshparmar/sortvisual/blob/master/CONTRIBUTING.md) for detailed explanations. Looking forward to see you in the board.
 
 ## Stuck somewhere? Need help?
-Please head towards my [profile](https://github.com/dipanshparmar) and contact me on my social media. I'd love to help :smiley:
+Please head towards [my profile](https://github.com/dipanshparmar) and contact me on my social media. I'd love to help :smiley:
 
-## Code Of Conduct
-We strongly recommend checking out our Code Of Conduct.
+## Code of Conduct
+We strongly recommend checking out our [Code of Conduct](https://github.com/dipanshparmar/sortvisual/blob/master/code-of-conduct.md).
 
 **Happy Contributing** :tada:
