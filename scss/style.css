@@ -229,7 +229,6 @@ main #visualizer-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: .2rem;
 }
 
 main #visualizer-container div {
