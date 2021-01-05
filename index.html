@@ -13,6 +13,7 @@
 
     <!-- internal CSS -->
     <link rel="stylesheet" href="scss/style.css" />
+    <link rel="stylesheet" href="scss/navbar_hover.css" />
 
     <!-- title -->
     <title>SortVisual - Visualise things for ease</title>
@@ -33,12 +34,12 @@
 
       <!-- logo section8 -->
       <div id="logo">
-        <span class="logo-text">SortVisual</span>
+        <span class="logo-text" >SortVisual</span>
       </div>
       <!-- controls with speed and size controlling -->
       <div id="controls">
-        <div id="speed-controls-container">
-          <span>Speed</span>
+        <div id="speed-controls-container"class="container gray highlightTextIn" >
+          <a class="speed button" style="font-size: 16px;" alt="Speed">Speed</a>
           <input
             class="slider"
             type="range"
@@ -50,8 +51,9 @@
             step="20"
           />
         </div>
-        <div id="size-controls-container">
-          <span>Size</span>
+        <div id="size-controls-container" class="container gray highlightTextIn">
+          
+          <a class="span button"  style="font-size: 16px;" alt="Size">Size</a>
           <input
             class="slider"
             type="range"
@@ -65,12 +67,12 @@
         </div>
       </div>
       <!-- different sorting algos selection -->
-      <div id="options">
-        <span class="merge button">Merge</span>
-        <span class="quick button">Quick</span>
-        <span class="bubble button">Bubble</span>
-        <span class="heap button">Heap</span>
-        <span class="selection button">Selection</span>
+      <div id="options" class="container gray highlightTextIn">
+        <a class="merge button" alt="Merge">Merge</a>
+        <a class="quick button"alt="Quick">Quick</a>
+        <a class="bubble button" alt="Bubble">Bubble</a>
+        <a class="heap button" alt="Heap">Heap</a>
+        <a class="selection button" alt="Selection">Selection</a>
       </div>
 
       <!-- generate new array button -->
