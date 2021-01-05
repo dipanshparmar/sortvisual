@@ -65,6 +65,19 @@ header {
           user-select: none;
 }
 
+header #github-repo-link {
+  background: white;
+  margin-top: -70px;
+  margin-left: -70px;
+  padding: 50px 70px 0px 70px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+header #github-repo-link img {
+  height: 30px;
+}
+
 header #logo {
   display: -webkit-box;
   display: -ms-flexbox;
