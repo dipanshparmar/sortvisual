@@ -26,20 +26,26 @@
 
     <!-- header with navbar and stuff8 -->
     <header>
-
       <!-- Github repo link -->
-      <a href="https://github.com/dipanshparmar/sortvisual" id="github-repo-link" target="_blank">
-        <img src="img/Octocat.jpg">
+      <a
+        href="https://github.com/dipanshparmar/sortvisual"
+        id="github-repo-link"
+        target="_blank"
+      >
+        <img src="img/Octocat.jpg" />
       </a>
 
       <!-- logo section8 -->
       <div id="logo">
-        <span class="logo-text" >SortVisual</span>
+        <span class="logo-text">SortVisual</span>
       </div>
       <!-- controls with speed and size controlling -->
       <div id="controls">
-        <div id="speed-controls-container"class="container gray highlightTextIn" >
-          <a class="speed button" style="font-size: 16px;" alt="Speed">Speed</a>
+        <div
+          id="speed-controls-container"
+          class="container gray highlightTextIn"
+        >
+          <a class="speed button" style="font-size: 16px" alt="Speed">Speed</a>
           <input
             class="slider"
             type="range"
@@ -51,9 +57,11 @@
             step="20"
           />
         </div>
-        <div id="size-controls-container" class="container gray highlightTextIn">
-          
-          <a class="span button"  style="font-size: 16px;" alt="Size">Size</a>
+        <div
+          id="size-controls-container"
+          class="container gray highlightTextIn"
+        >
+          <a class="span button" style="font-size: 16px" alt="Size">Size</a>
           <input
             class="slider"
             type="range"
@@ -69,7 +77,7 @@
       <!-- different sorting algos selection -->
       <div id="options" class="container gray highlightTextIn">
         <a class="merge button" alt="Merge">Merge</a>
-        <a class="quick button"alt="Quick">Quick</a>
+        <a class="quick button" alt="Quick">Quick</a>
         <a class="bubble button" alt="Bubble">Bubble</a>
         <a class="heap button" alt="Heap">Heap</a>
         <a class="selection button" alt="Selection">Selection</a>
@@ -77,18 +85,15 @@
 
       <!-- generate new array button -->
       <div id="new-array-button">
-          <button type="button" id="new-array">new array</button>
+        <button type="button" id="new-array">new array</button>
       </div>
     </header>
     <!-- header closes -->
 
     <!-- algorithms working body -->
     <main>
-      <div id="visualizer-container">
-        
-      </div>
+      <div id="visualizer-container"></div>
     </main>
-
 
     <!-- internal script -->
     <script type="module" src="js/interface.js"></script>
