@@ -10,6 +10,18 @@ header {
   color: white;
   user-select: none;
 
+  #github-repo-link {
+    background: white;
+    margin-top: -70px;
+    margin-left: -80px;
+    padding: 50px 70px 0px 70px;
+    transform: rotate(-40deg);
+
+    img {
+      height: 30px;
+    }
+  }
+
   #logo {
     display: flex;
     justify-content: center;
