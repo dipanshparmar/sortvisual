@@ -28,4 +28,4 @@ algoButtons.forEach((button) => {
     button.addEventListener('click', () => {
         algosContainer.style.transform = "translate(-100%)"; // hiding the container
     })
-})
+});
