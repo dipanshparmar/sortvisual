@@ -22,6 +22,18 @@ main {
     }
 }
 
+// github container
+#github-link-container {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    bottom: 0;
+    
+    img {
+        height: 40px;
+    }
+}
+
 // classes for javascript
 .disableButtonsAndInputs {
     pointer-events: none;

@@ -240,6 +240,17 @@ main #visualizer-container div {
   background: #e1bafd;
 }
 
+#github-link-container {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  bottom: 0;
+}
+
+#github-link-container img {
+  height: 40px;
+}
+
 .disableButtonsAndInputs {
   pointer-events: none;
   opacity: 0.7;
