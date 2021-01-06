@@ -178,9 +178,8 @@ header #new-array-button {
 header #new-array-button button {
   background: #1a8505;
   border: none;
-  padding: 13px 10px;
+  padding: 20px 30px;
   color: white;
-  border-radius: 5px;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
