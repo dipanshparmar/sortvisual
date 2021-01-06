@@ -12,6 +12,7 @@ div#notice {
   max-width: 100%;
   overflow: hidden;
   visibility: hidden;
+  z-index: 3;
 
   span {
     color: white;

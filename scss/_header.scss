@@ -9,6 +9,8 @@ header {
   background: $blackColor;
   color: white;
   user-select: none;
+  position: relative;
+  z-index: 3;
 
   #github-repo-link {
     background: white;

@@ -1,0 +1,39 @@
+#extra-algos-sidebar-container {
+    
+    #extra-algos-container {
+        position: absolute;
+        width: 15%;
+        height: 88vh;
+        bottom: 0;
+        background-color: #222222;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translate(-100%);
+        transition: 0.3s ease-in-out;
+
+        span {
+            color: white;
+            cursor: pointer;
+            padding: 5px;
+            
+        }
+    }
+
+    #extra-algos-container-toggler {
+        padding: 10px 20px;
+        padding-bottom: 0;
+        border: 0;
+        border-radius: 50px;
+        background-color: #8ece44;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
