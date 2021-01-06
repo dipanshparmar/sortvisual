@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   max-height: 100vh;
   overflow: hidden;
@@ -18,11 +18,11 @@ div#notice {
   width: 100%;
   height: 100vh;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: black;
   padding: 0px 20px;
   text-align: center;
@@ -53,16 +53,16 @@ header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: black;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #222222;
   color: white;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 header #github-repo-link {
@@ -71,7 +71,7 @@ header #github-repo-link {
   margin-left: -70px;
   padding: 50px 70px 0px 70px;
   -webkit-transform: rotate(-40deg);
-  transform: rotate(-40deg);
+          transform: rotate(-40deg);
 }
 
 header #github-repo-link img {
@@ -83,11 +83,11 @@ header #logo {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 header #logo span {
@@ -101,10 +101,10 @@ header #controls {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 header #controls #speed-controls-container,
@@ -114,11 +114,11 @@ header #controls #size-controls-container {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header #controls #speed-controls-container input.slider,
@@ -137,29 +137,23 @@ header #controls #speed-controls-container input.slider::-webkit-slider-thumb,
 header #controls #size-controls-container input.slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 2px solid #979797;
-  height: 0.875rem;
-  width: 0.875rem;
+  height: .875rem;
+  width: .875rem;
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
   -webkit-box-shadow: 0 0 4px 2px rgba(48, 48, 48, 0.3);
-  box-shadow: 0 0 4px 2px rgba(48, 48, 48, 0.3);
+          box-shadow: 0 0 4px 2px rgba(48, 48, 48, 0.3);
   -webkit-transition: -webkit-filter 150ms ease-in-out;
   transition: -webkit-filter 150ms ease-in-out;
   transition: filter 150ms ease-in-out;
   transition: filter 150ms ease-in-out, -webkit-filter 150ms ease-in-out;
 }
 
-header
-  #controls
-  #speed-controls-container
-  input.slider::-webkit-slider-thumb:hover,
-header
-  #controls
-  #size-controls-container
-  input.slider::-webkit-slider-thumb:hover {
+header #controls #speed-controls-container input.slider::-webkit-slider-thumb:hover,
+header #controls #size-controls-container input.slider::-webkit-slider-thumb:hover {
   -webkit-filter: brightness(0.85);
-  filter: brightness(0.85);
+          filter: brightness(0.85);
 }
 
 header #options {
@@ -167,11 +161,11 @@ header #options {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 header #options span {
@@ -181,14 +175,14 @@ header #options span {
 
 header #new-array-button {
   -webkit-box-flex: 0.6;
-  -ms-flex: 0.6;
-  flex: 0.6;
+      -ms-flex: 0.6;
+          flex: 0.6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 header #new-array-button button {
@@ -232,6 +226,53 @@ header #new-array-button button {
   }
 }
 
+
+div.container a {
+  color: rgb(24, 187, 24);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.gray {
+  background: none;
+}
+
+
+div.highlightTextIn a:before {
+  position: absolute;
+  /*color: #FFF;*/
+  color: lightgreen;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  overflow: hidden;
+  content: attr(alt);
+  transition: all 0.5s;
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+
+div.highlightTextIn a:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Highlight text in  */
+div.highlightTextIn a {
+  color: white;
+}
+
+div.highlightTextIn a:before {
+  transform: scale(1.5);
+}
+
+
 main {
   width: 100%;
   height: 88vh;
@@ -246,8 +287,8 @@ main #visualizer-container {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #visualizer-container div {

@@ -1,9 +1,7 @@
-@import "https://fonts.googleapis.com/css?family=Raleway";
-
 div.container a {
   color: rgb(24, 187, 24);
   text-decoration: none;
-  font: 20px Raleway;
+  font-family: 'Poppins', sans-serif;
   margin: 0px 10px;
   padding: 10px 10px;
   position: relative;
@@ -15,7 +13,7 @@ div.container a {
   background: none;
 }
 
-div.highlightTextOut a:before,
+
 div.highlightTextIn a:before {
   position: absolute;
   /*color: #FFF;*/
@@ -30,7 +28,7 @@ div.highlightTextIn a:before {
   opacity: 0;
 }
 
-div.highlightTextOut a:hover:before,
+
 div.highlightTextIn a:hover:before {
   transform: scale(1);
   opacity: 1;
