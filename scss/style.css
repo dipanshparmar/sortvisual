@@ -83,7 +83,7 @@ header #logo {
 header #logo span {
   font-size: 20px;
   font-weight: bold;
-  cursor: default;
+  cursor: pointer;
 }
 
 header #controls {
