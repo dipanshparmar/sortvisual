@@ -161,6 +161,37 @@ header #options {
 header #options span {
   cursor: pointer;
   padding: 5px;
+  position: relative;
+}
+
+header #options span::before, header #options span::after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: #FFF;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header #options span::before {
+  top: 0px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+header #options span::after {
+  bottom: 0px;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+header #options span:hover::before, header #options span:hover::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 header #new-array-button {
@@ -324,6 +355,37 @@ main #visualizer-container div {
   color: white;
   cursor: pointer;
   padding: 5px;
+  position: relative;
+}
+
+#extra-algos-sidebar-container #extra-algos-container span::before, #extra-algos-sidebar-container #extra-algos-container span::after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: #FFF;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#extra-algos-sidebar-container #extra-algos-container span::before {
+  top: 0px;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+#extra-algos-sidebar-container #extra-algos-container span::after {
+  bottom: 0px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+#extra-algos-sidebar-container #extra-algos-container span:hover::before, #extra-algos-sidebar-container #extra-algos-container span:hover::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 #extra-algos-sidebar-container #extra-algos-container-toggler {
