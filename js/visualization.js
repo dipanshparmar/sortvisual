@@ -1,3 +1,5 @@
+import { removeComplexities } from "./main.js";
+
 // setting delay so that each div can be visualize
 let delay = 0;
 
@@ -49,6 +51,10 @@ function enableButtonsAndInputs() {
     document
       .querySelector("#new-array")
       .classList.remove("disableButtonsAndInputs");
+
+    // Adding wildcard (calling it wildcard because it doesn't match with the function name and added it later :P)
+    // remove addition information
+    removeComplexities();
   }, delay); // delay to enable the buttons after complete visualization
 }
 

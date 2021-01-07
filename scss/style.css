@@ -277,10 +277,33 @@ header #new-array-button button span {
 main {
   width: 100%;
   height: 88vh;
+  background: wheat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #important-info-container {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main #important-info-container span {
+  margin: 0px 30px;
+  text-align: center;
 }
 
 main #visualizer-container {
-  width: 90%;
+  width: 80%;
   margin: auto;
   background: whitesmoke;
   height: 88vh;
@@ -296,6 +319,19 @@ main #visualizer-container div {
   border: 1px solid transparent;
   margin-left: 1px;
   background: #e1bafd;
+}
+
+main #additional-info-container {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #github-link-container {
@@ -389,7 +425,7 @@ main #visualizer-container div {
 }
 
 #extra-algos-sidebar-container #extra-algos-container-toggler {
-  background-color: #8ece44;
+  background-color: #222222;
   border: 0;
   border-radius: 50px;
   bottom: 0;
