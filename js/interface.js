@@ -6,6 +6,8 @@ import selectionSort from "./algorithms/selectionSort.js";
 import mergeSort from "./algorithms/mergeSort.js";
 import heapSort from "./algorithms/heapSort.js";
 
+import { addComplexities } from "./main.js";
+
 import {
   setDelayToZero,
   disableButtonsAndInputs,
@@ -43,6 +45,9 @@ getBarsForFifty();
 
 // handling the event on insertion sort button
 document.querySelector(".insertion").addEventListener("click", () => {
+  // adding additional information
+  addComplexities('O(n)', 'O(n*2)', 'O(n*2)', 'O(1)', 'Yes');
+
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
 
@@ -64,6 +69,9 @@ document.querySelector(".insertion").addEventListener("click", () => {
 
 // handling the event on heap sort button
 document.querySelector(".heap").addEventListener("click", () => {
+  // adding additional information
+  addComplexities('O(n*log(n))', 'O(n*log(n))', 'O(n*log(n))', 'O(1)', 'No');
+
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
 
@@ -85,6 +93,9 @@ document.querySelector(".heap").addEventListener("click", () => {
 
 // handling the event on selection sort button
 document.querySelector(".selection").addEventListener("click", () => {
+  // adding additional information
+  addComplexities('O(n*2)', 'O(n*2)', 'O(n*2)', 'O(1)', 'No');
+
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
 
@@ -106,6 +117,9 @@ document.querySelector(".selection").addEventListener("click", () => {
 
 // handling the event on merge sort button
 document.querySelector(".merge").addEventListener("click", () => {
+  // adding additional information
+  addComplexities('O(n*log(n))', 'O(n*(log n))', 'O(n*log(n))', 'O(n)', 'Yes');
+
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
 
@@ -127,6 +141,9 @@ document.querySelector(".merge").addEventListener("click", () => {
 
 // handling the event on quick sort button
 document.querySelector(".quick").addEventListener("click", () => {
+  // adding additional information
+  addComplexities('O(n*log(n))', 'O(n*2)', 'O(n*logn(n))', '-', 'No');
+
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
 
@@ -148,6 +165,9 @@ document.querySelector(".quick").addEventListener("click", () => {
 
 // handling the event on bubble sort button
 document.querySelector(".bubble").addEventListener("click", () => {
+  // adding additional information
+  addComplexities('O(n)', 'O(n*2)', 'O(n*2)', 'O(1)', 'Yes');
+
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
 
