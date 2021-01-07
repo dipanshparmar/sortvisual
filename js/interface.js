@@ -1,4 +1,5 @@
 /*********imports****************/
+import insertionSort from "./algorithms/insertionSort.js";
 import bubbleSort from "./algorithms/bubbleSort.js";
 import quickSort from "./algorithms/quickSort.js";
 import selectionSort from "./algorithms/selectionSort.js";
@@ -39,6 +40,27 @@ getBarsForFifty();
 /****************************************************/
 
 /**********************Event listeners***************/
+
+// handling the event on insertion sort button
+document.querySelector(".insertion").addEventListener("click", () => {
+  // getting the speed value
+  initialSpeed = parseInt(document.querySelector("#speed-control").value);
+
+  // converting the speed value into the possible timeout value
+  getTimeoutValue(initialSpeed);
+
+  // disabling the buttons
+  disableButtonsAndInputs();
+
+  // performing insertion sort
+  insertionSort(array, timeout);
+
+  // enabling the buttons
+  enableButtonsAndInputs();
+
+  // to start next sorting algorithm asap (without any delay)
+  setDelayToZero();
+});
 
 // handling the event on heap sort button
 document.querySelector(".heap").addEventListener("click", () => {
