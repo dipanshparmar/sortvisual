@@ -46,7 +46,7 @@ getBarsForFifty();
 // handling the event on insertion sort button
 document.querySelector(".insertion").addEventListener("click", () => {
   // adding additional information
-  addComplexities('O(n)', 'O(n*2)', 'O(n*2)', 'O(1)', 'Yes');
+  addComplexities('O(n)', 'O(n^2)', 'O(n^2)', 'O(1)', 'Yes');
 
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
@@ -94,7 +94,7 @@ document.querySelector(".heap").addEventListener("click", () => {
 // handling the event on selection sort button
 document.querySelector(".selection").addEventListener("click", () => {
   // adding additional information
-  addComplexities('O(n*2)', 'O(n*2)', 'O(n*2)', 'O(1)', 'No');
+  addComplexities('O(n^2)', 'O(n^2)', 'O(n^2)', 'O(1)', 'No');
 
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
@@ -142,7 +142,7 @@ document.querySelector(".merge").addEventListener("click", () => {
 // handling the event on quick sort button
 document.querySelector(".quick").addEventListener("click", () => {
   // adding additional information
-  addComplexities('O(n*log(n))', 'O(n*2)', 'O(n*logn(n))', '-', 'No');
+  addComplexities('O(n*log(n))', 'O(n^2)', 'O(n*logn(n))', '-', 'No');
 
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
@@ -166,7 +166,7 @@ document.querySelector(".quick").addEventListener("click", () => {
 // handling the event on bubble sort button
 document.querySelector(".bubble").addEventListener("click", () => {
   // adding additional information
-  addComplexities('O(n)', 'O(n*2)', 'O(n*2)', 'O(1)', 'Yes');
+  addComplexities('O(n)', 'O(n^2)', 'O(n^2)', 'O(1)', 'Yes');
 
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
