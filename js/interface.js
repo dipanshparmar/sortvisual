@@ -5,6 +5,7 @@ import quickSort from "./algorithms/quickSort.js";
 import selectionSort from "./algorithms/selectionSort.js";
 import mergeSort from "./algorithms/mergeSort.js";
 import heapSort from "./algorithms/heapSort.js";
+import shellSort from "./algorithms/shellSort.js";
 
 import { addComplexities } from "./main.js";
 
@@ -42,6 +43,30 @@ getBarsForFifty();
 /****************************************************/
 
 /**********************Event listeners***************/
+
+// handling the event on shell sort button
+document.querySelector(".shell").addEventListener("click", () => {
+  // adding additional information
+  addComplexities('O(n)', 'Depends on gap sequence', 'n*log(n)^2 or n^(3/2)', '-', 'No');
+
+  // getting the speed value
+  initialSpeed = parseInt(document.querySelector("#speed-control").value);
+
+  // converting the speed value into the possible timeout value
+  getTimeoutValue(initialSpeed);
+
+  // disabling the buttons
+  disableButtonsAndInputs();
+
+  // performing insertion sort
+  shellSort(array, timeout);
+
+  // enabling the buttons
+  enableButtonsAndInputs();
+
+  // to start next sorting algorithm asap (without any delay)
+  setDelayToZero();
+});
 
 // handling the event on insertion sort button
 document.querySelector(".insertion").addEventListener("click", () => {
