@@ -1,6 +1,6 @@
 $blackColor: rgb(34, 34, 34);
 
-header {
+.header {
   height: 12vh;
   min-width: 100%;
   display: flex;
@@ -12,7 +12,7 @@ header {
   position: relative;
   z-index: 3;
 
-  #logo {
+  &__logo {
     display: flex;
     justify-content: center;
     flex: 1;
@@ -24,13 +24,12 @@ header {
     }
   }
 
-  #controls {
+  &__controls {
     display: flex;
     flex: 1;
     justify-content: space-around;
 
-    #speed-controls-container,
-    #size-controls-container {
+    .control-container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -64,7 +63,7 @@ header {
     }
   }
 
-  #options {
+  &__options {
     display: flex;
     justify-content: space-evenly;
     flex: 2;
@@ -103,7 +102,7 @@ header {
     }
   }
 
-  #new-array-button {
+  &__btn-container {
     flex: 0.6;
     display: flex;
     justify-content: flex-start;
@@ -154,20 +153,19 @@ header {
 
 // responsiveness goes here :)
 @media only screen and (max-width: 768px) {
-  header {
-    #logo {
+  .header {
+    &__logo {
       span {
         font-size: 16px;
       }
     }
 
-    #controls {
+    &__controls {
       span {
         font-size: 12px;
       }
 
-      #speed-controls-container,
-      #size-controls-container {
+      .control-container {
         input.slider {
           width: 80%;
 
@@ -180,13 +178,13 @@ header {
       }
     }
 
-    #options {
+    &__options {
       span {
         font-size: 13px;
       }
     }
 
-    #new-array-button {
+    &__btn-container {
       button {
         font-size: 8px;
         padding: 10px 4px;

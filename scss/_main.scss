@@ -8,7 +8,7 @@ main {
     background: #E6E7EE;
     display: flex;
 
-    #important-info-container {
+    .important-info-container {
         width: 10%;
         display: flex;
         flex-direction: column;
@@ -20,7 +20,7 @@ main {
         }
     }
 
-    #visualizer-container {
+    .visualizer-container {
         width: 80%;
         margin: auto;
         background: whitesmoke;
@@ -35,23 +35,11 @@ main {
         }
     }
 
-    #additional-info-container {
+    .additional-info-container {
         width: 10%;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-}
-
-// github container
-#github-link-container {
-    bottom: 0;
-    margin-right: 10px;
-    position: absolute;
-    right: 0;
-
-    img {
-        height: 40px;
     }
 }
 
@@ -68,7 +56,7 @@ main {
 
 @media only screen and (max-width: 768px) {
     main {
-        #visualizer-container {
+        .visualizer-container {
             max-width: 90%;
             overflow-x: scroll;
         }

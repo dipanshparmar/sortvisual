@@ -30,38 +30,38 @@
     </div>
 
     <!-- left sidebar for extra algos -->
-    <div id="extra-algos-sidebar-container">
-      <div id="extra-algos-container">
-        <span class="insertion button">Insertion</span>
-        <span class="radix button">Radix</span>
-        <span class="smooth button">Smooth</span>
-        <span class="shell button">Shell</span>
-        <span class="bogosort button">BogoSort</span>
-        <span class="cocktail-shaker button">Cocktail Shaker</span>
-        <span class="comb button">comb</span>
-        <span class="cycle button">cycle</span>
+    <div class="extra-algos-sidebar" id="extra-algos-sidebar-container">
+      <div class="extra-algos-sidebar__container" id="extra-algos-container">
+        <span class="insertion extra-algos-sidebar__button">Insertion</span>
+        <span class="radix extra-algos-sidebar__button">Radix</span>
+        <span class="smooth extra-algos-sidebar__button">Smooth</span>
+        <span class="shell extra-algos-sidebar__button">Shell</span>
+        <span class="bogosort extra-algos-sidebar__button">BogoSort</span>
+        <span class="cocktail-shaker extra-algos-sidebar__button">Cocktail Shaker</span>
+        <span class="comb extra-algos-sidebar__button">comb</span>
+        <span class="cycle extra-algos-sidebar__button">cycle</span>
       </div>
-      <div id="extra-algos-container-toggler">
+      <div class="extra-algos-sidebar__toggler" id="extra-algos-container-toggler">
         <img src="img/icons/forward-arrow.svg" alt="arrow" />
       </div>
     </div>
 
     <!-- github link -->
-    <div id="github-link-container">
+    <div class="github-link-container">
       <a href="https://github.com/dipanshparmar/sortvisual" target="_blank">
         <img src="img/octocat.svg" alt="octocat" />
       </a>
     </div>
 
     <!-- header with navbar and stuff8 -->
-    <header>
+    <header class="header">
       <!-- logo section8 -->
-      <div id="logo">
+      <div class="header__logo" id="logo">
         <span class="logo-text">SortVisual</span>
       </div>
       <!-- controls with speed and size controlling -->
-      <div id="controls">
-        <div id="speed-controls-container">
+      <div class="header__controls" id="controls">
+        <div class="control-container" id="speed-controls-container">
           <span>Speed</span>
           <input
             class="slider"
@@ -74,7 +74,7 @@
             step="20"
           />
         </div>
-        <div id="size-controls-container">
+        <div class="control-container" id="size-controls-container">
           <span>Size</span>
           <input
             class="slider"
@@ -89,7 +89,7 @@
         </div>
       </div>
       <!-- different sorting algos selection -->
-      <div id="options">
+      <div class="header__options" id="options">
         <span class="merge button">Merge</span>
         <span class="quick button">Quick</span>
         <span class="bubble button">Bubble</span>
@@ -97,7 +97,7 @@
         <span class="selection button">Selection</span>
       </div>
       <!-- generate new array button -->
-      <div id="new-array-button">
+      <div class="header__btn-container" id="new-array-button">
           <button type="button" id="new-array">
             <span>new array</span>
           </button>
@@ -107,16 +107,16 @@
 
     <!-- algorithms working body -->
     <main>
-      <div id="important-info-container">
+      <div class="important-info-container" id="important-info-container">
         <span>Best case time complexity: <strong class="bctc">?</strong></span>
         <span>Worst case time complexity: <strong class="wctc">?</strong></span>
         <span>Average case time complexity: <strong class="actc">?</strong></span>
         <span>Space complexity: <strong class="sc">?</strong></span>
       </div>
-      <div id="visualizer-container">
+      <div class="visualizer-container" id="visualizer-container">
         <!-- dynamic bars go here -->
       </div>
-      <div id="additional-info-container">
+      <div class="additional-info-container" id="additional-info-container">
         <span>Stable: <strong class="stability">?</strong></span>
       </div>
     </main>
