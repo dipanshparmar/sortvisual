@@ -21,12 +21,13 @@ main {
     }
 
     .visualizer-container {
-        width: 80%;
         margin: auto;
         background: whitesmoke;
         height: 88vh;
         display: flex;
         justify-content: center;
+        flex: 1;
+        max-width: 80%;
 
         div {
             border: 1px solid transparent;
@@ -36,7 +37,7 @@ main {
     }
 
     .additional-info-container {
-        width: 10%;
+        padding: 0 7px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -56,9 +57,25 @@ main {
 
 @media only screen and (max-width: 768px) {
     main {
+        .important-info-container {
+            width: 13%;
+            span {
+                margin: 0px 10px;
+                font-size: 14px;
+            }
+        }
         .visualizer-container {
             max-width: 90%;
             overflow-x: scroll;
         }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    main {
+        .important-info-container {
+            display: none;
+        }
+
     }
 }

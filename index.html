@@ -60,41 +60,47 @@
         <span class="logo-text">SortVisual</span>
       </div>
       <!-- controls with speed and size controlling -->
-      <div class="header__controls" id="controls">
-        <div class="control-container" id="speed-controls-container">
-          <span>Speed</span>
-          <input
-            class="slider"
-            type="range"
-            name="speed"
-            id="speed-control"
-            min="0"
-            max="101"
-            value="50"
-            step="20"
-          />
-        </div>
-        <div class="control-container" id="size-controls-container">
-          <span>Size</span>
-          <input
-            class="slider"
-            type="range"
-            name="size"
-            id="size-control"
-            min="10"
-            max="101"
-            value="50"
-            step="10"
-          />
-        </div>
+      <div class="header__menu header__controls" id="controls">
+        <span class="header__menu__mobile-title">Controls</span>
+        <ul class="header__menu__list">
+          <li class="control-container" id="speed-controls-container">
+            <span>Speed</span>
+            <input
+              class="slider"
+              type="range"
+              name="speed"
+              id="speed-control"
+              min="0"
+              max="101"
+              value="50"
+              step="20"
+            />
+          </li>
+          <li class="control-container" id="size-controls-container">
+            <span>Size</span>
+            <input
+              class="slider"
+              type="range"
+              name="size"
+              id="size-control"
+              min="10"
+              max="101"
+              value="50"
+              step="10"
+            />
+          </li>
+        </ul>
       </div>
       <!-- different sorting algos selection -->
-      <div class="header__options" id="options">
-        <span class="merge button">Merge</span>
-        <span class="quick button">Quick</span>
-        <span class="bubble button">Bubble</span>
-        <span class="heap button">Heap</span>
-        <span class="selection button">Selection</span>
+      <div class="header__menu header__options" id="options">
+        <span class="header__menu__mobile-title">Options</span>
+        <ul class="header__menu__list">
+          <li class="header__options__item merge">Merge</li>
+          <li class="header__options__item quick">Quick</li>
+          <li class="header__options__item bubble">Bubble</li>
+          <li class="header__options__item heap">Heap</li>
+          <li class="header__options__item selection">Selection</li>
+        </ul>
       </div>
       <!-- generate new array button -->
       <div class="header__btn-container" id="new-array-button">

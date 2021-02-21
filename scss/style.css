@@ -11,7 +11,7 @@ body {
 }
 
 div#notice {
-  display: flex;
+  display: none;
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -42,7 +42,6 @@ main {
 }
 .header {
   height: 12vh;
-  min-width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -51,6 +50,7 @@ main {
   user-select: none;
   position: relative;
   z-index: 3;
+  padding-right: 10px;
 }
 .header__logo {
   display: flex;
@@ -62,8 +62,30 @@ main {
   font-weight: bold;
   cursor: pointer;
 }
-.header__controls {
+.header__menu {
   display: flex;
+  position: relative;
+}
+.header__menu__mobile-title {
+  display: none;
+  font-size: 13px;
+}
+.header__menu__mobile-title::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  padding: 3px;
+  margin-left: 8px;
+  border: solid #f8ffff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.header__menu__list {
+  display: flex;
+  list-style: none;
+}
+.header__controls {
   flex: 1;
   justify-content: space-around;
 }
@@ -97,16 +119,15 @@ main {
   filter: brightness(0.85);
 }
 .header__options {
-  display: flex;
   justify-content: space-evenly;
   flex: 2;
 }
-.header__options span {
+.header__options__item {
   cursor: pointer;
   padding: 5px;
   position: relative;
 }
-.header__options span::before, .header__options span::after {
+.header__options__item::before, .header__options__item::after {
   position: absolute;
   left: 0px;
   width: 100%;
@@ -116,15 +137,15 @@ main {
   opacity: 0;
   transition: all 0.3s;
 }
-.header__options span::before {
+.header__options__item::before {
   top: 0px;
   transform: translateY(-10px);
 }
-.header__options span::after {
+.header__options__item::after {
   bottom: 0px;
   transform: translateY(10px);
 }
-.header__options span:hover::before, .header__options span:hover::after {
+.header__options__item:hover::before, .header__options__item:hover::after {
   opacity: 1;
   transform: translateY(0px);
 }
@@ -176,7 +197,7 @@ main {
   .header__logo span {
     font-size: 16px;
   }
-  .header__controls span {
+  .header__controls .control-container span {
     font-size: 12px;
   }
   .header__controls .control-container input.slider {
@@ -194,6 +215,35 @@ main {
     font-size: 8px;
     padding: 10px 4px;
     letter-spacing: 1px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .header__menu {
+    flex: 0.9;
+    cursor: pointer;
+  }
+  .header__menu:hover .header__menu__list {
+    display: flex;
+  }
+  .header__menu__mobile-title {
+    display: block;
+  }
+  .header__menu__list {
+    position: absolute;
+    flex-direction: column;
+    background-color: #222;
+    top: 41px;
+    padding: 10px;
+    min-width: 150px;
+    left: 4px;
+    font-size: 14px;
+    display: none;
+  }
+  .header__controls .control-container {
+    margin-bottom: 30px;
+  }
+  .header__btn-container button span {
+    font-size: 10px;
   }
 }
 .github-link-container {
@@ -223,12 +273,13 @@ main .important-info-container span {
   text-align: center;
 }
 main .visualizer-container {
-  width: 80%;
   margin: auto;
   background: whitesmoke;
   height: 88vh;
   display: flex;
   justify-content: center;
+  flex: 1;
+  max-width: 80%;
 }
 main .visualizer-container div {
   border: 1px solid transparent;
@@ -236,7 +287,7 @@ main .visualizer-container div {
   background: #e1bafd;
 }
 main .additional-info-container {
-  width: 10%;
+  padding: 0 7px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,9 +304,21 @@ main .additional-info-container {
 }
 
 @media only screen and (max-width: 768px) {
+  main .important-info-container {
+    width: 13%;
+  }
+  main .important-info-container span {
+    margin: 0px 10px;
+    font-size: 14px;
+  }
   main .visualizer-container {
     max-width: 90%;
     overflow-x: scroll;
+  }
+}
+@media only screen and (max-width: 425px) {
+  main .important-info-container {
+    display: none;
   }
 }
 .extra-algos-sidebar__container {
@@ -313,6 +376,13 @@ main .additional-info-container {
   padding-bottom: 0;
   position: absolute;
   z-index: 1;
+}
+
+@media only screen and (max-width: 425px) {
+  .extra-algos-sidebar__container {
+    width: unset;
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

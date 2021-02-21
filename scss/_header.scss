@@ -2,7 +2,6 @@ $blackColor: rgb(34, 34, 34);
 
 .header {
   height: 12vh;
-  min-width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -11,6 +10,7 @@ $blackColor: rgb(34, 34, 34);
   user-select: none;
   position: relative;
   z-index: 3;
+  padding-right: 10px;
 
   &__logo {
     display: flex;
@@ -24,8 +24,31 @@ $blackColor: rgb(34, 34, 34);
     }
   }
 
-  &__controls {
+  &__menu {
     display: flex;
+    position: relative;
+    &__mobile-title {
+      display: none;
+      font-size: 13px;
+      &::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        padding: 3px;
+        margin-left: 8px;
+        border: solid #f8ffff;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+    }
+    &__list {
+      display: flex;
+      list-style: none;
+    }
+  }
+
+  &__controls {
     flex: 1;
     justify-content: space-around;
 
@@ -64,11 +87,10 @@ $blackColor: rgb(34, 34, 34);
   }
 
   &__options {
-    display: flex;
     justify-content: space-evenly;
     flex: 2;
 
-    span {
+    &__item {
       cursor: pointer;
       padding: 5px;
       position: relative;
@@ -161,11 +183,11 @@ $blackColor: rgb(34, 34, 34);
     }
 
     &__controls {
-      span {
-        font-size: 12px;
-      }
-
       .control-container {
+        span {
+          font-size: 12px;
+        }
+
         input.slider {
           width: 80%;
 
@@ -189,6 +211,42 @@ $blackColor: rgb(34, 34, 34);
         font-size: 8px;
         padding: 10px 4px;
         letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .header {
+    &__menu {
+      flex: 0.9;
+      cursor: pointer;
+      &:hover &__list {
+        display: flex;
+      }
+      &__mobile-title {
+        display: block;
+      }
+      &__list {
+        position: absolute;
+        flex-direction: column;
+        background-color: #222;
+        top: 41px;
+        padding: 10px;
+        min-width: 150px;
+        left: 4px;
+        font-size: 14px;
+        display: none;
+      }
+    }
+    &__controls {
+      .control-container {
+        margin-bottom: 30px;
+      }
+    }
+    &__btn-container {
+      button span {
+        font-size: 10px;
       }
     }
   }

@@ -58,3 +58,12 @@ $lightGreen: #8ece44;
         z-index: 1;
     }
 }
+
+@media only screen and (max-width: 425px) {
+    .extra-algos-sidebar {
+        &__container {
+            width: unset;
+            font-size: 14px;
+        }
+    }
+}
