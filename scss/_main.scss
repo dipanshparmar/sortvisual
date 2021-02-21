@@ -41,6 +41,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 10%;
     }
 }
 
@@ -58,12 +59,11 @@ main {
 @media only screen and (max-width: 768px) {
     main {
         .important-info-container {
-            width: 13%;
             span {
-                margin: 0px 10px;
                 font-size: 14px;
             }
         }
+
         .visualizer-container {
             max-width: 90%;
             overflow-x: scroll;
@@ -73,9 +73,12 @@ main {
 
 @media only screen and (max-width: 425px) {
     main {
-        .important-info-container {
+        .important-info-container,
+        .additional-info-container {
             display: none;
         }
-
+        .visualizer-container {
+            max-width: 100%;
+        }
     }
 }

@@ -15,11 +15,13 @@ $lightGreen: #8ece44;
         transform: translate(-100%);
         transition: 0.3s ease-in-out;
     }
+    
     &__button {
         color: white;
         cursor: pointer;
         padding: 5px;
         position: relative;
+
         &::before, &::after {
             position: absolute;
             left: 0px;
@@ -30,19 +32,23 @@ $lightGreen: #8ece44;
             opacity: 0;
             transition: all 0.3s;
         }
+
         &::before {
             top: 0px;
             transform: translateY(10px);
         }
+
         &::after {
             bottom: 0px;
             transform: translateY(-10px);
         }
+
         &:hover::before, &:hover::after {
             opacity: 1;
             transform: translateY(0px);
         }
     }
+
     &__toggler {
         background-color: #222222;
         border: 0;

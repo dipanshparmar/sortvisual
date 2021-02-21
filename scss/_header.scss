@@ -27,9 +27,11 @@ $blackColor: rgb(34, 34, 34);
   &__menu {
     display: flex;
     position: relative;
+
     &__mobile-title {
       display: none;
       font-size: 13px;
+      
       &::after {
         content: "";
         display: inline-block;
@@ -42,15 +44,22 @@ $blackColor: rgb(34, 34, 34);
         transform: rotate(45deg);
       }
     }
+
     &__list {
       display: flex;
       list-style: none;
+      width: 100%;
+      justify-content: space-evenly;
     }
   }
 
   &__controls {
     flex: 1;
     justify-content: space-around;
+
+    .header__menu__list {
+      justify-content: space-around;
+    }
 
     .control-container {
       display: flex;
@@ -135,7 +144,7 @@ $blackColor: rgb(34, 34, 34);
       cursor: pointer;
       outline: none;
       overflow: hidden;
-      padding: 10px 30px;
+      padding: 20px 30px;
       position: relative;
 
       &::after {
@@ -230,6 +239,7 @@ $blackColor: rgb(34, 34, 34);
       &__list {
         position: absolute;
         flex-direction: column;
+        justify-content: unset;
         background-color: #222;
         top: 41px;
         padding: 10px;

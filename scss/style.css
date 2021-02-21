@@ -84,9 +84,14 @@ main {
 .header__menu__list {
   display: flex;
   list-style: none;
+  width: 100%;
+  justify-content: space-evenly;
 }
 .header__controls {
   flex: 1;
+  justify-content: space-around;
+}
+.header__controls .header__menu__list {
   justify-content: space-around;
 }
 .header__controls .control-container {
@@ -160,7 +165,7 @@ main {
   cursor: pointer;
   outline: none;
   overflow: hidden;
-  padding: 10px 30px;
+  padding: 20px 30px;
   position: relative;
 }
 .header__btn-container button::after {
@@ -231,6 +236,7 @@ main {
   .header__menu__list {
     position: absolute;
     flex-direction: column;
+    justify-content: unset;
     background-color: #222;
     top: 41px;
     padding: 10px;
@@ -291,6 +297,7 @@ main .additional-info-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 10%;
 }
 
 .disableButtonsAndInputs {
@@ -304,11 +311,7 @@ main .additional-info-container {
 }
 
 @media only screen and (max-width: 768px) {
-  main .important-info-container {
-    width: 13%;
-  }
   main .important-info-container span {
-    margin: 0px 10px;
     font-size: 14px;
   }
   main .visualizer-container {
@@ -317,8 +320,12 @@ main .additional-info-container {
   }
 }
 @media only screen and (max-width: 425px) {
-  main .important-info-container {
+  main .important-info-container,
+main .additional-info-container {
     display: none;
+  }
+  main .visualizer-container {
+    max-width: 100%;
   }
 }
 .extra-algos-sidebar__container {
