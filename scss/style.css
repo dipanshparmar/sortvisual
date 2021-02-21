@@ -160,7 +160,7 @@ main {
   cursor: pointer;
   outline: none;
   overflow: hidden;
-  padding: 20px 30px;
+  padding: 10px 30px;
   position: relative;
 }
 .header__btn-container button::after {
