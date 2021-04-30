@@ -20,6 +20,7 @@ Please refer to the [contributing.md](https://github.com/dipanshparmar/sortvisua
 
 ## Contributor's Clan
 **These are the people behind this project**
+<br/>
 <a href="https://github.com/dipanshparmar/sortvisual/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=dipanshparmar/sortvisual" />
 </a>
