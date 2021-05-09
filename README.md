@@ -19,7 +19,6 @@ You only need some knowledge of HTML, CSS and Javascript and you're good to go. 
 Please refer to the [contributing.md](https://github.com/dipanshparmar/sortvisual/blob/master/CONTRIBUTING.md) for detailed explanations. Looking forward to see you in the board.
 
 ## Contributor's Clan
-**These are the people behind this project**
 <br/>
 <a href="https://github.com/dipanshparmar/sortvisual/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=dipanshparmar/sortvisual" />
