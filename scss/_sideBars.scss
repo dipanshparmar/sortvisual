@@ -20,6 +20,7 @@ $lightGreen: #8ece44;
             cursor: pointer;
             padding: 5px;
             position: relative;
+            text-align: center;
 
             &::before, &::after {
                 position: absolute;
@@ -62,5 +63,31 @@ $lightGreen: #8ece44;
         padding-bottom: 0;
         position: absolute;
         z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 1268px) {
+    #extra-algos-sidebar-container {
+        #extra-algos-container {
+            width: 50%;
+
+        span {
+            font-size: 14px;
+        }
+        }
+    }
+
+    #extra-algos-container-toggler {
+        img {
+            height: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 856px) {
+    #extra-algos-container {
+        span {
+            font-size: 12px;
+        }
     }
 }
