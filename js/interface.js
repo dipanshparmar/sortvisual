@@ -50,7 +50,7 @@ getBarsForFifty();
 // handling the event on the cycle sort
 document.querySelector('.cycle').addEventListener('click', () => {
   // adding additional information
-  addComplexities('O(n)', 'O(n^2)', 'O(n*log(n))', 'O(1)', 'No'); // TODO: update this
+  addComplexities('O(n^2)', 'O(n^2)', 'O(n^2)', 'O(1)', 'No');
 
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
