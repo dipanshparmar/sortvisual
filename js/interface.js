@@ -7,6 +7,7 @@ import mergeSort from "./algorithms/mergeSort.js";
 import heapSort from "./algorithms/heapSort.js";
 import shellSort from "./algorithms/shellSort.js";
 import cocktailShakerSort from "./algorithms/cocktailShakerSort.js";
+import combsort from "./algorithms/combSort.js";
 
 import { addComplexities } from "./main.js";
 
@@ -44,6 +45,30 @@ getBarsForFifty();
 /****************************************************/
 
 /**********************Event listeners***************/
+
+// handling the event on the combsort
+document.querySelector('.comb').addEventListener('click', () => {
+  // adding additional information
+  addComplexities('O(n)', 'O(n^2)', 'O(n*log(n))', 'O(1)', 'No');
+
+  // getting the speed value
+  initialSpeed = parseInt(document.querySelector("#speed-control").value);
+
+  // converting the speed value into the possible timeout value
+  getTimeoutValue(initialSpeed);
+
+  // disabling the buttons
+  disableButtonsAndInputs();
+
+  // performing insertion sort
+  combsort(array, timeout);
+
+  // enabling the buttons
+  enableButtonsAndInputs();
+
+  // to start next sorting algorithm asap (without any delay)
+  setDelayToZero();
+})
 
 // handling the event on cycle sort button
 document.querySelector(".cocktail-shaker").addEventListener("click", () => {
