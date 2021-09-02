@@ -53,7 +53,6 @@ const cocktailShakerSort = (arr, timeout) => {
         }
         min++;
     }
-    console.log(arr)
 }
 
 export default cocktailShakerSort;
