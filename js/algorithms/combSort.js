@@ -48,7 +48,7 @@ function combsort(arr, timeout)
               var temp = arr[front];
               arr[front] = arr[back];
               updateDiv(divs[front], "green", timeout);
-              updateDiv(divs[front], "red", timeout, arr[back]) // color and size update
+              updateDiv(divs[front], "red", timeout, arr[back]); // color and size update
               updateDiv(divs[front], "rgb(225, 186, 253)", timeout);
               arr[back] = temp;
               updateDiv(divs[back], "green", timeout);
