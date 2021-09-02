@@ -49,7 +49,7 @@ getBarsForFifty();
 // handling the event on the combsort
 document.querySelector('.comb').addEventListener('click', () => {
   // adding additional information
-  addComplexities('O(n)', 'O(n^2)', 'O(n^2)', 'O(1)', 'Yes'); // TODO: update this
+  addComplexities('O(n)', 'O(n^2)', 'O(n*log(n))', 'O(1)', 'No');
 
   // getting the speed value
   initialSpeed = parseInt(document.querySelector("#speed-control").value);
