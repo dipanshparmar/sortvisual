@@ -279,7 +279,7 @@ header #hamburger, header #controls-hamburger {
   header #controls {
     display: none;
     position: absolute;
-    top: 12vh;
+    top: 13vh;
     background: #222222;
     padding: 25px 15px;
     border: 0;

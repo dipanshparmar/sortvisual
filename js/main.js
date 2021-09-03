@@ -70,4 +70,15 @@ document.querySelector('#controls-hamburger img').addEventListener('click', () =
     isControlsOpen = !isControlsOpen;
 })
 
+// if there is a click on the visualizer container and if the controls or the options are already being displayed then hide them
+document.querySelector('#visualizer-container').addEventListener('click', () => {
+    if (isControlsOpen) {
+        document.querySelector('#controls').style.display = 'none';
+    }
+    
+    if (isOptionsOpen) {
+        document.querySelector('#options').style.display = 'none';
+    }
+})
+
 export { addComplexities, removeComplexities };
