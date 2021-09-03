@@ -13,9 +13,7 @@ function cycleSort(arr, timeout)
     // traverse array elements and put it to on
     // the right place
     for (let cycle_start = 0; cycle_start <= n - 2; cycle_start++)
-    {
-        console.log(cycle_start)
-        
+    {   
         // initialize item as starting point
         let item = arr[cycle_start];
         // updateDiv(divs[cycle_start], "rgb(225, 186, 253)", timeout);
