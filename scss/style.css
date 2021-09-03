@@ -10,43 +10,6 @@ body {
   overflow: hidden;
 }
 
-div#notice {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: black;
-  padding: 0px 20px;
-  text-align: center;
-  max-height: 100vh;
-  max-width: 100%;
-  overflow: hidden;
-  visibility: hidden;
-  z-index: 3;
-}
-
-div#notice span {
-  color: white;
-}
-
-@media only screen and (max-width: 425px) {
-  header,
-  main {
-    display: none;
-  }
-  div#notice {
-    visibility: visible;
-  }
-}
-
 header {
   height: 12vh;
   min-width: 100%;
@@ -127,8 +90,8 @@ header #controls #speed-controls-container input.slider::-webkit-slider-thumb,
 header #controls #size-controls-container input.slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 2px solid #979797;
-  height: .875rem;
-  width: .875rem;
+  height: 0.875rem;
+  width: 0.875rem;
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
@@ -169,7 +132,7 @@ header #options span::before, header #options span::after {
   left: 0px;
   width: 100%;
   height: 1px;
-  background: #FFF;
+  background: #fff;
   content: "";
   opacity: 0;
   -webkit-transition: all 0.3s;
@@ -247,37 +210,87 @@ header #new-array-button button span {
   z-index: 5;
 }
 
-@media only screen and (max-width: 768px) {
-  header #logo span {
-    font-size: 16px;
+header #hamburger, header #controls-hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  header {
+    font-size: 14px;
   }
-  header #controls span {
-    font-size: 12px;
+}
+
+@media only screen and (max-width: 1300px) {
+  header #new-array-button button {
+    padding: 0;
+    border: 0;
   }
+  header #new-array-button button span {
+    color: #00c500;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
   header #controls #speed-controls-container input.slider,
   header #controls #size-controls-container input.slider {
     width: 80%;
   }
-  header #controls #speed-controls-container input.slider::-webkit-slider-thumb,
-  header #controls #size-controls-container input.slider::-webkit-slider-thumb {
-    height: 0.625rem;
-    width: 0.625rem;
-    border: 1px solid #979797;
+}
+
+@media only screen and (max-width: 768px) {
+  header #logo span {
+    font-size: 16px;
   }
-  header #options span {
-    font-size: 13px;
+  header #options {
+    position: absolute;
+    top: 12vh;
+    right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #222222;
+    height: 88vh;
+    width: 30%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: none;
   }
   header #new-array-button button {
-    font-size: 8px;
-    padding: 10px 4px;
-    letter-spacing: 1px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header #hamburger, header #controls-hamburger {
+    -webkit-box-flex: 0.4;
+        -ms-flex: 0.4;
+            flex: 0.4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header #controls {
+    display: none;
+    position: absolute;
+    top: 12vh;
+    background: #222222;
+    padding: 25px 15px;
+    border: 0;
+    border-radius: 5px;
   }
 }
 
 main {
   width: 100%;
   height: 88vh;
-  background: #E6E7EE;
+  background: #e6e7ee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,6 +326,7 @@ main #visualizer-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: scroll;
 }
 
 main #visualizer-container div {
@@ -355,10 +369,50 @@ main #additional-info-container {
   opacity: 1;
 }
 
+@media only screen and (max-width: 1400px) {
+  main {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  main {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  main {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  main #important-info-container {
+    width: 15%;
+  }
+  main #visualizer-container {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  main #visualizer-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   main #visualizer-container {
-    max-width: 90%;
-    overflow-x: scroll;
+    width: 100%;
+  }
+  main #additional-info-container {
+    display: none;
+  }
+  main #important-info-container {
+    display: none;
   }
 }
 
@@ -392,6 +446,7 @@ main #additional-info-container {
   cursor: pointer;
   padding: 5px;
   position: relative;
+  text-align: center;
 }
 
 #extra-algos-sidebar-container #extra-algos-container span::before, #extra-algos-sidebar-container #extra-algos-container span::after {
@@ -437,5 +492,20 @@ main #additional-info-container {
   padding-bottom: 0;
   position: absolute;
   z-index: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  #extra-algos-sidebar-container {
+    font-size: 14px;
+  }
+  #extra-algos-sidebar-container #extra-algos-container {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #extra-algos-sidebar-container #extra-algos-container {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
